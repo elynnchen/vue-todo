@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+    <style>
+        body {
+            background: #20262E;
+            padding: 20px;
+            font-family: Helvetica;
+        }
+
+        #app {
+            background: #fff;
+            border-radius: 4px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+
+        li {
+            margin: 8px 0; color: rgba(0, 0, 0, 0.5);
+        }
+
+
+
+
+        .checked span { color: rgba(0, 0, 0, 1);}
+    </style>
+</head>
+<body>
+<div id="app">
+    <h2>渲染列表，获取点事件</h2>
+    <ol>
+        <li v-for="(todo,index) in todos" :key="index">
+            <label :class="{ checked: todo.isChecked }" >
+                <input type="checkbox" v-on:click="checked(index)" >
+                <span  > {{ todo.text  }} </span>
+            </label>
+        </li>
+    </ol>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            todos: [
+                { text: "微信微信微信微信微信 " ,isChecked:false},
+                { text: "腾讯腾讯腾讯腾讯腾讯",isChecked:false},
+                { text: "王者荣耀王者荣耀王者荣耀王者荣耀" ,isChecked:false},
+                { text: "企业微信企业微信企业微信企业微信",isChecked:false}
+            ]
+        },
+        methods: {
+            checked:function (index) {
+                console.log(index)
+                this.todos[index].isChecked=!this.todos[index].isChecked
+            }
+
+        }
+    })
+</script>
+
+</body>
+</html>

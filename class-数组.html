@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+    <style>
+        .cur{color: red;}
+        .active-one{background: #ccc;}
+
+        .button{width:100px; height: 30px; line-height: 30px; background: #f2f2f2;
+            border:1px solid #999; border-radius: 5px; display: inline-block; text-align: center; }
+        .button:hover{background: #ddd; cursor: pointer}
+    </style>
+</head>
+<body>
+<h1>样式绑定--数组实现</h1>
+<div id="app">
+    <p :class="[classname classnameone]">点击按钮风格变化</p><!--isactive为变量 cur是否显示取决于isactive是true或false-->
+    <button class="button"  v-on:click="handleClick" > 点我 </button>
+</div>
+
+
+<script>
+    var app= new Vue({
+        el:'#app',
+        data:{
+            classname:"",
+            classnameone:"active-one"
+
+        },
+        methods:{
+            handleClick:function () {
+                this.classname = this.classname==="cur"?"":"cur"
+            }
+
+        }
+    })
+
+</script>
+
+</body>
+</html>

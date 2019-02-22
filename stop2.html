@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+</head>
+<body>
+<div id="myApp" @click="show2()">
+    <div @click.stop="show1()">
+        <button @click="show0">vue点我</button>
+    </div>
+</div>
+
+
+<script>
+    window.onload=function(){
+        let vm=new Vue({
+            el:'#myApp',
+            data:{
+            },
+            methods:{
+                show0(){
+                    console.log("000")
+                },
+                show1(){
+                    console.log("111")
+                },
+                show2(){
+                    console.log("222")
+                },
+            }
+        });
+    }
+</script>
+</body>
+</html>

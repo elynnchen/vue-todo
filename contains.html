@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+</head>
+<body>
+<h1>key</h1>
+<div id="parent">
+    parent
+    <div id="children">children</div>
+</div>
+
+
+<script>
+    let pa=document.getElementById('parent')
+    let ch=document.getElementById('children')
+    if (pa.contains(ch)){
+        console.log(true)
+    }
+    if (ch.contains(pa)){
+        console.log(false)
+    }
+
+</script>
+</body>
+</html>

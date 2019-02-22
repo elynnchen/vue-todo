@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+    <style>
+        .title{
+            background-color: #ff0;
+        }
+        .content{
+            color: #000;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <p v-bind:class="getTitle()">html属性不能使用双大括号形式绑定，只能使用v-bind指令</p>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            getTitle: function () {
+                return 'title content';
+            }
+        }
+    })
+</script>
+</body>
+
+
+</html>

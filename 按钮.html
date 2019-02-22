@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+    <style>
+      html ,body{margin: 0;padding:0;}
+      .we-button{display:inline-flex;justify-content: center;align-items:center;vertical-align: middle;
+          line-height:24px;padding:0 20px;font-size:12px;color:#333;border-style:solid;border-width:1px;border-radius:26px;
+          text-align:center;cursor:pointer;}
+      .we-button:hover{color:#333;}
+
+      /* 按钮默认样式 */
+      .we-button--default{border-color:rgba(164,164,164,1)}
+      .we-button--default:hover{background-color:rgba(164,164,164,0.12);}
+      /* 按钮默认样式 */
+      .we-button--primary{border-color:#faab00;background:rgba(255,200,0,0.5);}
+      .we-button--primary:hover{background:#ffc800;}
+
+
+      .we-button .button-tx{order: 2}
+      .we-button .icon{order: 1}
+      .we-button.icon-right .button-tx{order: 1}
+      .we-button.icon-right .icon{order: 2}
+      .we-button[disabled], .we-button[disabled]:hover{color:#adadad;border-color:#eee;background-color: #eee;cursor:default;}
+      .we-button--default[disabled],  .we-button--default[disabled]:hover{border-color:rgba(164,164,164,0.3);background-color: rgba(0,0,0,0);}
+      .we-button--primary[disabled] , .we-button--primary:hover[disabled]{border-color:#f2e2c0;background:#f2ecd8;}
+
+
+
+
+
+
+      /*颜色风格*/
+      /*.we-button--color-xxx*/
+
+      .we-button--major{border-color:#ffc800;background-color:#ffc800;}
+      .we-button--major:hover{border-color:#e6b400;background-color:#e6b400;}
+      /*重要的*/
+
+      .we-button--info{border-color:#3b9cff;background-color:#3b9cff;color:#fff;}
+      .we-button--info:hover{background-color:#358de6;color:#fff;}
+      /*信息*/
+
+      .we-button--buy{border-color:#ff8d13;background-color:#ff8d13;color:#fff;}
+      .we-button--buy:hover{background-color:#e67e10;color:#fff;}
+      /*购买*/
+
+
+      /*强调*/
+      .we-button--em { border-color: rgba(0,0,0,0.7); background-color: rgba(0,0,0,0.7); color: #adadad; }
+      .we-button--em:hover{border-color: rgba(0,0,0,0.6); background-color: rgba(0,0,0,0.6);color: #adadad;}
+
+      /*尺寸*/
+      .we-button--size-m{line-height: 30px;}
+      .we-button--size-l{line-height: 34px;}
+      .we-button--size-full{line-height:34px;width: 100%}
+
+      /*icon*/
+
+      .we-button .svg-icon{ order: 1;}
+      .we-button.icon-right .svg-icon{ order: 2;}
+      .svg-icon{height:16px;width:16px; }
+
+      @keyframes loading {
+          0%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(360deg);
+          }
+      }
+      .loading{ animation: loading 2s infinite linear; margin:0 2px;}
+    </style>
+</head>
+<body>
+<h1>样式</h1>
+
+<a class="we-button " ><span class="button-tx">默认</span></a>
+<a class="we-button we-button--primary" ><span class="button-tx">主要按钮</span></a>
+<a class="we-button we-button--major" ><span class="button-tx">重要按钮</span></a>
+<a class="we-button we-button--primary we-button--size-l" ><span class="button-tx">长按钮</span></a>
+
+
+</body>
+</html>

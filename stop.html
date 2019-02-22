@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+</head>
+<body>
+<div id="app">
+    <div @click="dodo">
+        <button @click.stop="dothis">阻止单击事件继续传播</button>
+    </div>
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            name: "Vue.js"
+        },
+        methods: {
+            dothis: function () {
+                alert("noclick");
+            },
+            dodo: function () {
+                alert("dodo");
+            }
+        }
+    });
+</script>
+</body>
+</html>

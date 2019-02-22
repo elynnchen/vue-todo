@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" ></script>
+    <style>
+        .box{
+            background-color: #ff0;
+        }
+        .textColor{
+            color: #000;
+        }
+        .textSize{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <span class="box" :class="[isA?classA:'', classB]">我是字</span>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data:{
+            classA: 'textColor',
+            classB: 'textSize',
+            isA: false
+        }
+    })
+</script>
+</body>
+
+
+</html>
